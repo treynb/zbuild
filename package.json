@@ -1,5 +1,5 @@
 {
-  "name": "zbuild",
+  "name": "@treynb/zbuild",
   "version": "0.1.0",
   "description": "build for react typescript project",
   "bin": {
