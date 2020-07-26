@@ -5,7 +5,7 @@
 ### 安装
 
 ```
-tnpm install @ali/zbuild@beta -D
+tnpm install @ali/zbuild -D
 ```
 
 ### 项目开发
@@ -105,10 +105,7 @@ module.exports = (env) => {
 "scripts": {
     "dev": "zbuild dev -c webpack.config.js",
     "mock": "zbuild mock webpack.config.js",
-    "testprod": "BUILD_ARGV_STR=--def_publish_env=prod BUILD_GIT_BRANCH=testprod/1.0.0 BUILD_GIT_GROUP=ccode BUILD_GIT_PROJECT=workbench zbuild prod -c webpack.config.js",
     "prod": "zbuild prod webpack.config.js",
     "lint": "zbuild lint && zbuild type-check"
 }
 ```
-
-> testprod是模拟def构建环境

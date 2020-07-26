@@ -55,10 +55,5 @@
   "devDependencies": {
     "eslint-plugin-node": "^11.1.0",
     "husky": "^4.2.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "tnpm run lint"
-    }
   }
 }
