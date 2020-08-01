@@ -18,6 +18,13 @@ program
   });
 
 program
+  .command('dev2')
+  .option('-c,--config <config>', 'custom webpack config')
+  .action(function ({ config }) {
+    runBuild(devConfigFn(), getCustomConfig(config, 'development'));
+  });
+
+program
   .command('mock')
   .option('-c,--config <config>', 'custom webpack config')
   .action(function ({ config }) {

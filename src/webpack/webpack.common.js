@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['.tsx', '.js', '.ts'],
+    extensions: ['.tsx', '.js', '.ts', 'jsx'],
     alias: {
       '@': paths.src,
     },
@@ -59,13 +59,23 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: paths.template }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
   ],
   optimization: {
     moduleIds: 'named',
     namedChunks: true,
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendor',
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
+    runtimeChunk: {
+      name: 'manifest',
+    },
   },
 };
 

@@ -58,7 +58,7 @@ zbuild dev
 
 #### eslint
 
-默认采用了airbnb-typescript，airbnb的规则十分严格，可以在根目录下添加.eslintrc，进行rule覆盖
+默认采用了airbnb-typescript，airbnb的规则相对严格，可以在根目录下添加.eslintrc，进行rule覆盖
 
 `.eslintrc.js`
 ```

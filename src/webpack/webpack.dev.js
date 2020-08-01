@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 
@@ -11,5 +12,10 @@ module.exports = () => {
       host: 'localhost',
       disableHostCheck: true,
     },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+      }),
+    ],
   });
 };
