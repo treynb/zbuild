@@ -4,8 +4,6 @@ const program = require('commander');
 const pkg = require('./package.json');
 
 require('./src/webpack');
-require('./src/eslint');
-require('./src/type-check');
 
 program
   .version(pkg.version)
